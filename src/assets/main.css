@@ -61,3 +61,28 @@
         transform: rotate(360deg);
     }
 }
+    
+  .button label,
+  .button input {
+    display: block;
+ 
+  }
+  
+  .button input[type='radio'] {
+    opacity: 0;
+    z-index: 100;
+    position: absolute;
+  }
+  
+  .button input[type='radio']:checked + label {
+    background: #ffffff;
+    color: #000;
+    border-radius: 0.75rem;
+  }
+  
+  .button label {
+    cursor: pointer;
+    z-index: 90;
+    line-height: 1.8em;
+  }
+  
