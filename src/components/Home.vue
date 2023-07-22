@@ -14,7 +14,7 @@
   </div>
   <nav class="absolute top-0 w-full p-4">
     <div class="flex justify-between items-center mx-12">
-      <img src="../images/Weather Ease-1 (1).png" alt="Weather Ease Logo" class="w-48" />
+      <img src="../images/weather.png" alt="Weather Ease Logo" class="w-48" />
       <div class="button flex items-center">
         <div class="flex bg-bleck-1 mr-2 text-white rounded-xl">
           <input
