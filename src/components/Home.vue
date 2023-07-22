@@ -13,7 +13,7 @@
     </p>
   </div>
   <nav class="absolute top-0 w-full p-4">
-    <div class="flex justify-between items-center mx-12">
+    <div class="flex justify-between items-center max-sm:mx-0 mx-12">
       <img src="../images/weather.png" alt="Weather Ease Logo" class="w-48" />
       <div class="button flex items-center">
         <div class="flex bg-bleck-1 mr-2 text-white rounded-xl">
