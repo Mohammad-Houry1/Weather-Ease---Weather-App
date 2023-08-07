@@ -154,7 +154,7 @@ export default {
         const ipAddress = data.ip
         $('#gfg').html(ipAddress)
         fetch(
-          'https://api.weatherapi.com/v1/forecast.json?key=1a203c096ea140559c3144101230907 &q=' +
+          'https://api.weatherapi.com/v1/forecast.json?key=b9a569e23e184bc7b84114040230708&q=' +
             ipAddress +
             '&days=10&aqi=no&alerts=no'
         )
