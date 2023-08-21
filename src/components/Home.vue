@@ -154,9 +154,9 @@ export default {
         const ipAddress = data.ip
         $('#gfg').html(ipAddress)
         fetch(
-          'https://api.weatherapi.com/v1/forecast.json?key=b9a569e23e184bc7b84114040230708&q=' +
+          'https://api.weatherapi.com/v1/forecast.json?key=5a8bd396ba5b44fd9af110543232108&q=' +
             ipAddress +
-            '&days=10&aqi=no&alerts=no'
+            '&days=9&aqi=no&alerts=no'
         )
           .then((response) => response.json())
           .then((data) => {
@@ -176,7 +176,7 @@ export default {
             $('#feelsLike').text(Math.floor(data.current.feelslike_c) + '℃')
             $('#Sunrise').text(data.forecast.forecastday[0].astro.sunrise)
             $('#Sunset').text(data.forecast.forecastday[0].astro.sunset)
-            for (let i = 1; i < 10; i++) {
+            for (let i = 0; i < 9; i++) {
               let forecastTemp = Math.round(data.forecast.forecastday[i].day.avgtemp_c)
               let forecastTempIcon = data.forecast.forecastday[i].day.condition.icon
               let forecastDate = data.forecast.forecastday[i].date
@@ -219,16 +219,17 @@ export default {
         const ipAddress = data.ip
         $('#gfg').html(ipAddress)
         fetch(
-          'https://api.weatherapi.com/v1/forecast.json?key=1a203c096ea140559c3144101230907 &q=' +
+          'https://api.weatherapi.com/v1/forecast.json?key=5a8bd396ba5b44fd9af110543232108&q=' +
             ipAddress +
-            '&days=10&aqi=no&alerts=no'
+            '&days=9&aqi=no&alerts=no'
         )
           .then((response) => response.json())
           .then((data) => {
             $('#temp').text(Math.floor(data.current.feelslike_c) + '℃')
             $('#feelsLike').text(Math.floor(data.current.feelslike_c) + '℃')
-            for (let i = 1; i < 10; i++) {
-              $('#tempInC' + i).text(Math.round(data.forecast.forecastday[i].day.avgtemp_c) + '℃')
+            for (let i = 0; i < 9; i++) {
+              $('#tempInC' + i)[0].textContent =
+                Math.round(data.forecast.forecastday[i].day.avgtemp_c) + '℃'
             }
           })
       })
@@ -239,16 +240,17 @@ export default {
         const ipAddress = data.ip
         $('#gfg').html(ipAddress)
         fetch(
-          'https://api.weatherapi.com/v1/forecast.json?key=1a203c096ea140559c3144101230907 &q=' +
+          'https://api.weatherapi.com/v1/forecast.json?key=5a8bd396ba5b44fd9af110543232108&q=' +
             ipAddress +
-            '&days=10&aqi=no&alerts=no'
+            '&days=9&aqi=no&alerts=no'
         )
           .then((response) => response.json())
           .then((data) => {
             $('#temp').text(Math.floor(data.current.feelslike_f) + '°F')
             $('#feelsLike').text(Math.floor(data.current.feelslike_f) + '°F')
-            for (let i = 1; i < 10; i++) {
-              $('#tempInC' + i).text(Math.round(data.forecast.forecastday[i].day.avgtemp_f) + '°F')
+            for (let i = 0; i < 9; i++) {
+              $('#tempInC' + i)[0].textContent =
+                Math.round(data.forecast.forecastday[i].day.avgtemp_f) + '°F'
             }
           })
       })
